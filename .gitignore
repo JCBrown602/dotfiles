@@ -1,0 +1,15 @@
+# Ignore VS Code workspace file
+dotfiles.code-workspace
+
+# Ignore common temp/editor files
+*.swp
+*.swo
+.DS_Store
+
+# Ignore SSH keys (if you ever bring them in)
+.ssh/*
+!.ssh/config
+
+# Optional: ignore Python cache
+__pycache__/
+
