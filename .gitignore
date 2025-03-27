@@ -5,6 +5,7 @@ dotfiles.code-workspace
 *.swp
 *.swo
 .DS_Store
+!config
 
 # Ignore SSH keys (if you ever bring them in)
 .ssh/*
