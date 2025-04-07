@@ -17,5 +17,8 @@ ln -sf ~/dotfiles/.aliases ~/.aliases
 echo "Adding: ln -sf ~/dotfiles/.zprofile ~/.zprofile"
 ln -sf ~/dotfiles/.zprofile ~/.zprofile
 
+echo "Adding: ln -sf ~/dotfiles/.virtualenvs ~/.virtualenvs"
+ln -sf ~/dotfiles/.virtualenvs ~/.virtualenvs
+
 echo "dotfiles setup complete. ✅"
 

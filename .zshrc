@@ -34,8 +34,17 @@ alias dot='code ~/dotfiles/dotfiles.code-workspace'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+# 🐍 Show virtualenv in prompt
+function virtualenv_info {
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    echo "%F{10}($(basename $VIRTUAL_ENV))%f "
+  fi
+}
+
 # Prompt tweak (optional)
-PROMPT='%F{cyan}%n@%m%f:%F{yellow}%~%f$ '
+#PROMPT='$(virtualenv_info)%F{cyan}%n@%m%f:%F{yellow}%~%f$ '
+#PROMPT='$(virtualenv_info)%F{green}%n@%m%f:%F{blue}%~%f %# '
+PROMPT='$(virtualenv_info)%F{green}%n@%m%f:%F{yellow}%~%f$ '
 
 # Load .zshrc on terminal start
 [ -f ~/.vimrc ] || echo '" Basic vimrc created by zshrc' > ~/.vimrc
@@ -82,3 +91,7 @@ add-zsh-hook precmd update_rprompt
 # Left and Right prompt setup
 PROMPT='%F{cyan}%n@%m%f:%F{yellow}%~%f$ '
 
+# 🐍 Virtualenvwrapper setup
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source $HOME/.local/bin/virtualenvwrapper.sh

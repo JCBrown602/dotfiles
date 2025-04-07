@@ -14,3 +14,5 @@ dotfiles.code-workspace
 # Optional: ignore Python cache
 __pycache__/
 
+# Leave out python envs
+.virtualenvs
